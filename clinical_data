@@ -1,0 +1,15 @@
+INSERT INTO medical_records (patient_id, doctor_id, appointment_id, diagnosis, symptoms, visit_date) VALUES
+(1, 1, 1, 'Malaria', 'Fever, headache, chills', '2026-11-11'),
+(2, 2, 2, 'Hypertension', 'Chest pain, dizziness', '2026-11-11');
+
+INSERT INTO prescriptions (record_id, medication_id, dosage, frequency, duration_days) VALUES
+(1, 1, '500mg', 'Twice daily', 3),
+(1, 2, '500mg', 'Three times daily', 5),
+(2, 3, '20mg', 'Once daily', 30);
+
+INSERT INTO invoices (patient_id, appointment_id, total_amount, status) VALUES
+(1, 1, 1500.00, 'PAID'),
+(2, 2, 2500.00, 'UNPAID');
+
+INSERT INTO payments (invoice_id, amount, method) VALUES
+(1, 1500.00, 'MPESA');
